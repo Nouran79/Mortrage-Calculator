@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Mortgage Calculator </title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <script src="js.js" ></script>
+    <form id="form" name="paym" onsubmit="return false">
+        <div id="leftPart">
+             <div id="heading"> 
+            <label id="title"> Mortgage Calculator </label> 
+             <label id="clear" onclick="Clear()" > Clear All </label> 
+            </div>
+        <div>
+            <label id="fieldlbl"> Mortgage Amout </label> <br>
+            <input type="number" id="amount" name="amount"/>
+        </div>
+        <div id="beside">
+            <div id="term">
+                <label id="fieldlbl"> Mortgage Term </label> <br>
+                <input type="number" id="inputsbeside" name="term" />
+            </div>
+            <div id="rate">
+                <label id="fieldlbl"> Interest Rate</label> <br>
+                <input type="number"  id="inputsbeside" name="rate" />
+            </div>
+        </div>
+        <div id="radios">
+            <label id="fieldlbl"> Mortgage Type</label> <br>
+            <div id="rb1">
+                 <input type="radio" id="Repayment" name="type" value="1">
+                 <label for="Repayment"> Repayment</label> <br>
+            </div>
+           <div id="rb2">
+            <input type="radio" id="Interests_Only" name="type" value="2">
+            <label for="Interests_Only"> Interests Only</label>
+           </div>
+            
+        </div>
+        <svg id="calcIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/></svg>
+        <button id="calc" onclick="calcRes()"> Calculate Repayments</button>
+        </div>
+       <div id="rightPart">
+        <label id="lbl1"> Your Results </label>
+        <p id="info">
+            Your results are shown below based on the information <br>
+            you provided. To adjust the results, edit the form and <br>
+            click "Calculate repayments" again.<br>
+        </p>
+       
+        <div id="Results">
+            <label  id="fieldlbl2"> Your monthly repayments </label> <br>
+            <p id="amount2" name="paymentres">$</p><br>
+            <label  id="fieldlbl2"> Total you will repay over the term</label><br>
+            <label id="amount3" name="overallres">$</label>
+        </div>
+       </div>
+    </form>
+ 
+</body>
+</html>
